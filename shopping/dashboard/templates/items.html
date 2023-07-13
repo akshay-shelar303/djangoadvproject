@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block content %}
+ {% for item in items %}
+<div class="row">
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/media/{{item.image}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">{{item.description}}</p>
+                <h4>Rs.{{item.price}}</h4>
+                <a href="{% url 'item' %}"><button type="button" class="btn btn-primary">Add to Cart</button></a>
+            </div>
+        </div>
+
+    </div>
+     
+</div>    
+ {% endfor %}
+{% endblock %}
