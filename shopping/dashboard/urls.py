@@ -1,7 +1,8 @@
-from django.urls import path
-from .views import dashboardView, show_electronics_items, add_electronics_items
-from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path
+
+from .views import add_electronics_items, dashboardView, show_electronics_items
 
 urlpatterns = [
     path("home/", dashboardView, name="home"),

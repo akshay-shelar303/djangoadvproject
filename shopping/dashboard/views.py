@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
-from .models import ElectronicItems
-from .forms import ElectronicForm
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect, render
+
+from .forms import ElectronicForm
+from .models import ElectronicItems
 
 
 @login_required()
